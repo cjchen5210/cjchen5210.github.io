@@ -27,7 +27,7 @@
 <meta property="og:site_name" content="CJ瞎想">
 <meta property="og:description" content="单链表3F原则——Focus   Feedback   Fix it 前言就目前对于我对计算机的心理表征来看，计算机基础知识包括了一门编程语言、数据结构与算法、计算机网络和编程范式。但是，我目前只是对于一门或几门编程语言有所学习，而没有接触并学习其他计算机知识，这使得我在计算机领域还未能实现正常行走。（写专业博客的时候严肃一点）而且，在了解了刻意练习的规则和构建了关于【练习】的心理表征之后，开始在">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-04-25T02:47:57.581Z">
+<meta property="og:updated_time" content="2020-04-25T02:52:30.080Z">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://yoursite.com/2020/04/17/%E5%8D%95%E9%93%BE%E8%A1%A8/">
@@ -186,7 +186,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-25 10:47:57" itemprop="dateModified" datetime="2020-04-25T10:47:57+08:00">2020-04-25</time>
+                <time title="修改时间：2020-04-25 10:52:30" itemprop="dateModified" datetime="2020-04-25T10:52:30+08:00">2020-04-25</time>
               </span>
 
           
@@ -208,9 +208,9 @@
 <p>◉做的第一个操作就是遍历链表<br>☞遍历所有节点</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">Node temp = head;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(temp != null)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    temp = temp.next;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
 <p>☞遍历到最后一个节点</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">Node temp = head;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(temp。next != null)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    temp = temp.next;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">Node temp = head;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(temp.next != null)&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    temp = temp.next;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
 <p>◉找到尾节点（有头节点就有尾节点，但是还没学，嘻嘻，待解决），添加元素</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">temp,next = node;</span></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">temp.next = node;</span></pre></td></tr></table></figure>
 <p>尾节点的指针指向新加入的节点，成功添加元素<br>◉插入节点(目前没有实现这个操作，不了解哪里出了问题，待解决)</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">Node insertNode = new Node();</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">insertNode.next = temp.next;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">temp.next = insertNode;</span></pre></td></tr></table></figure>
 <p>把要插入元素的前一个元素的指针赋给插入元素的指针，再把插入元素的地址赋给前一个元素的指针，完成插入。</p>
